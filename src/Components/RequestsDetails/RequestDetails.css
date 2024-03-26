@@ -10,7 +10,7 @@
     border-radius:10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.requestsButtonApprove{
+.requestsButtonnotApproved{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 6px;
@@ -18,4 +18,14 @@
     background-color: lightpink;
     border: none;
     border-radius:10px;
+    cursor: pointer;
+}
+.requestsButtonapproved{
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: green;
+    border: none;
+    border-radius:10px;
+    cursor: pointer;
 }

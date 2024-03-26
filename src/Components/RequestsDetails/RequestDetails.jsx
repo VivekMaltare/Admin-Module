@@ -1,8 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../RequestsDetails/RequestDetails.css'
 import Navbar from '../Navbar/Navbar'
 import { DataGrid } from '@mui/x-data-grid'
 export default function RequestDetails() {
+  const [isApproved, setIsApproved] = useState(false);
+  const handleToggle = () => {
+    // Toggle the approval status
+    setIsApproved(!isApproved);
+    // Call a function here if you need to perform additional actions
+  };
+  const buttonClass = isApproved ? 'requestsButtonapproved' : 'requestsButtonnotApproved';
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     {
@@ -29,7 +36,7 @@ export default function RequestDetails() {
       width: 130,
       renderCell:(params)=>{
         return(
-          <button className="requestsButtonApprove">Approve</button>
+          <button className={buttonClass} onClick={handleToggle}>{isApproved ? 'Approved' : 'Approve'}</button>
         )
       }
     },
