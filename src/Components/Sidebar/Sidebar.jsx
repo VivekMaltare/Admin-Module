@@ -3,6 +3,7 @@ import '../Sidebar/Sidebar.css'
 import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { IoLogOut } from "react-icons/io5";
+import {Link} from 'react-router-dom'
 export default function Sidebar() {
   return (
     <div className='mainSidebarContainer'>
@@ -15,7 +16,7 @@ export default function Sidebar() {
             </li>
             <li className='liContainer'>
                 <FaUser className='sidebarIcons'/>
-                <p className='itemNames'>Doctors</p>
+                <Link to='/doctors'><p className='itemNames'>Doctors</p></Link>
             </li>
             <li className='liContainer'>
                 <FaUser className='sidebarIcons'/>
