@@ -1,8 +1,8 @@
 import React from 'react'
-import '../DoctorDetailsComponent/Doctor.css'
+import '../RequestsDetails/RequestDetails.css'
 import Navbar from '../Navbar/Navbar'
-import { DataGrid } from '@mui/x-data-grid';
-export default function Doctor() {
+import { DataGrid } from '@mui/x-data-grid'
+export default function RequestDetails() {
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     {
@@ -29,7 +29,7 @@ export default function Doctor() {
       width: 130,
       renderCell:(params)=>{
         return(
-          <button className="requestsButton">Approved</button>
+          <button className="requestsButtonApprove">Approve</button>
         )
       }
     },
@@ -46,9 +46,9 @@ export default function Doctor() {
     { id: 9, lastName: 'Roxie', firstName: 'Harvey',MiddleName:'lannister', age: 65 },
   ];
   return (
-    <div className='MainDoctorContainer'>
-      <Navbar />
-      <div className="doctorDataTable">
+    <div className='MainRequestContainer'>
+      <Navbar/>
+      <div className="RequestsTable">
       <div>
       <DataGrid
         rows={rows}

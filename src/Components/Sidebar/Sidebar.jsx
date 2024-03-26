@@ -12,29 +12,29 @@ export default function Sidebar() {
             <h4 className='menu'>Menu</h4>
             <li className='liContainer'>
                 <FaHome className='sidebarIcons'/>
-                <p className='itemNames'>Home</p>
+                <Link to='/' style={{textDecoration:'none'}}><p className='itemNames'>Home</p></Link>
             </li>
             <li className='liContainer'>
                 <FaUser className='sidebarIcons'/>
-                <Link to='/doctors'><p className='itemNames'>Doctors</p></Link>
+                <Link to='/doctors' style={{textDecoration:'none'}}><p className='itemNames'>Doctors</p></Link>
             </li>
             <li className='liContainer'>
                 <FaUser className='sidebarIcons'/>
-                <p className='itemNames'>Moderators</p>
+                <Link to='/moderators' style={{textDecoration:'none'}}><p className='itemNames'>Moderators</p></Link>
             </li>
             <li className='liContainer'>
                 <FaUser className='sidebarIcons'/>
-                <p className='itemNames'>Responders</p>
+                <Link to='/responders' style={{textDecoration:'none'}}><p className='itemNames'>Responders</p></Link>
             </li>
             <li className='liContainer'>
                 <IoLogOut className='sidebarIcons'/>
-                <p className='itemNames'>Logout</p>
+                <Link to="/logout" style={{textDecoration:'none'}}><p className='itemNames'>Logout</p></Link>
             </li>
         </ul>
         <div className='mainScheduledContainer'>
             <h4 className='RequestTitle'>Requests</h4>
             <div className="RequestContainer">
-            <a href="/Requests">View Requests</a>
+            <Link to="/Requests">View Requests</Link>
             </div>
         </div>
       </div>
