@@ -19,7 +19,7 @@
 .profileIcon{
     height: 30px;
     width: 30px;
-    margin-left: 25px;
+    margin-left: 10px;
 }
 .profileItemsContainer{
     display: flex;
@@ -36,4 +36,5 @@
 }
 .profileName{
     margin-left: 10px;
+    white-space: nowrap;
 }

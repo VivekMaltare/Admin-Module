@@ -2,6 +2,7 @@ import React from 'react'
 import '../Navbar/Navbar.css'
 import { IoIosNotifications } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
+import {Link} from 'react-router-dom';
 export default function Navbar() {
   return (
     <div className='mainNavbarContainer'>
@@ -13,7 +14,7 @@ export default function Navbar() {
         <IoIosNotifications className='notificationIcon'/>
         <div className='profileItems'>
           <FaUser className='profileIcon'/>
-          <p className='profileName'>Vivek</p>
+          <Link to="/profile" style={{textDecoration:'none',color:'black',cursor:'pointer'}}><p className='profileName'>View Profile</p></Link>
         </div>
       </div>
     </div>
