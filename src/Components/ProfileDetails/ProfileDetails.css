@@ -4,32 +4,51 @@
   }
 
   .viewProfileContainer {
-    width: 60%;
+    width: 55%;
     background-color: white;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 10px auto;
     padding: 20px;
     box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+  }
+  .viewProfileContainer:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
   }
   
   .userProfile {
     text-align: center;
     margin-bottom: 20px;
+    background: linear-gradient(to bottom right, #ffecd2, #fcb69f); /* Gradient background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Add padding for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
   }
   
   .userAvatar img {
+    border: 2px solid #ffffff;
     width: 130px;
     height: 150px;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
   }
-  
+  .userAvatar img:hover {
+    transform: scale(1.5); /* Enlarge image on hover */
+  } 
   .userName {
     margin: 10px 0;
+    font-weight: 200;
   }
   
   .userEmail {
     margin: 5px 0 20px;
+    font-weight: 200;
+  }
+  .personalDetailsHeading{
+    text-align: center;
+    font-weight: 200;
   }
   
   .aboutSection {

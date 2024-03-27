@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../ProfileDetails/ProfileDetails.css';
 import Navbar from '../Navbar/Navbar';
 
@@ -23,7 +23,7 @@ export default function ProfileDetails() {
             </p>
           </div> */}
           <div className="personalDetails">
-            <h2>Personal Details</h2>
+            <h1 className='personalDetailsHeading'>Personal Details</h1>
             <div className="formField">
               <label htmlFor="fullName" className="formLabel">Full Name</label>
               <input readOnly type="text" id="fullName" className="formInput non-editable-field" placeholder="Enter full name" />
@@ -35,7 +35,7 @@ export default function ProfileDetails() {
             {/* Add more personal details fields here */}
           </div>
           <div className="addressSection">
-            <h2>Address</h2>
+            {/* <h2>Address</h2> */}
             <div className="formField">
               <label htmlFor="street" className="formLabel">Street</label>
               <input type="text" id="street" className="formInput" placeholder="Enter street" />
@@ -44,11 +44,19 @@ export default function ProfileDetails() {
               <label htmlFor="city" className="formLabel">City</label>
               <input type="text" id="city" className="formInput" placeholder="Enter city" />
             </div>
+            <div className="formField">
+              <label htmlFor="city" className="formLabel">City</label>
+              <input type="text" id="city" className="formInput" placeholder="Enter city" />
+            </div>
+            <div className="formField">
+              <label htmlFor="city" className="formLabel">City</label>
+              <input readOnly type="text" id="city" className="formInput non-editable-field" placeholder="Enter city" />
+            </div>
             {/* Add more address fields here */}
           </div>
           <div className="buttonContainer">
             <button className="cancelButton">Cancel</button>
-            <button className="updateButton">Update</button>
+            <button className="updateButton">Edit</button>
           </div>
         </>
       </div>
