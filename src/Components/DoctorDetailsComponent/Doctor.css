@@ -13,9 +13,15 @@
 .requestsButton{
     padding-left: 10px;
     padding-right: 10px;
+    color: black;
     padding-top: 6px;
     padding-bottom: 6px;
-    background-color: green;
     border: none;
     border-radius:10px;
+}
+.disabledButtonClass{
+    background-color: gray;
+}
+.approvedButtonClass{
+    background-color: green;
 }

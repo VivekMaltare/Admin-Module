@@ -1,22 +1,57 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
+import axios from 'axios'
 import '../DoctorDetailsComponent/Doctor.css'
 import Navbar from '../Navbar/Navbar'
 import { DataGrid } from '@mui/x-data-grid';
 export default function Doctor() {
+  const [doctors,setDoctors]=useState([]);
+  useEffect(() => {
+    fetchData();
+  }, []); 
+  const fetchData = async () => {
+    try {
+      const token = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjpbIkFETUlOIl0sImlhdCI6MTcxMTYxNjIyNywiZXhwIjoxNzExNjUyMjI3fQ.XtoybJEG3QHIT83Habw4uvPizy7MMcfszqe54bk8jkE';
+      const response = await axios.get('http://192.168.39.236:8082/api/admin/doctors',{
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type":'application/json',
+      }
+      });
+      console.log(response.data);
+      const extractedDoctors = response.data.map((doctor,index) => ({
+        id: index+1,
+        fullName: `${doctor.firstName || ''} ${doctor.middleName || ''} ${doctor.lastName || ''}`,
+        gender: doctor.gender,
+        licence_no: doctor.licenceNo,
+        experience: doctor.experience,
+        consultationFee: doctor.consultationFee,
+        isSenior: doctor.isSenior?"yes":"no",
+        Email: doctor.email,
+        age: doctor.age,
+        isDisabled:doctor.isDisabled
+      }));
+      setDoctors(extractedDoctors);
+      console.log(extractedDoctors);
+    } catch (error) {
+      console.error('Error fetching data:', error.message);
+    }
+  };
+  
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     {
       field: 'fullName',
-      headerName: 'Full name',
+      headerName: 'Full Name',
       description: 'This column has a value getter and is not sortable.',
       sortable: false,
-      width: 130,
-      valueGetter: (value, row) => `${row.firstName || ''} ${row.lastName || ''}`,
+      width: 160
     },
     { field: 'gender', headerName: 'Gender', width: 130,sortable:false, },
-    { field: 'license_no', headerName: 'License No', width: 130 },
+    { field: 'licence_no', headerName: 'License No', width: 130 },
     { field: 'experience', headerName: 'experience', width: 130 },
-    { field: 'mobileNo', headerName: 'Mobile No', width: 130 },
+    { field: 'consultationFee', headerName: 'Consultation Fee', width: 130 },
+    { field: 'isSenior', headerName: 'Senior Doctor', width: 130 },
+    { field: 'Email', headerName: 'Email', width: 180 },
     {
       field: 'age',
       headerName: 'Age',
@@ -28,30 +63,25 @@ export default function Doctor() {
       headerName: 'Requests',
       width: 130,
       renderCell:(params)=>{
+        const doctor = params.row;
+        const status=doctor.isDisabled?"Pending":"Approved";
+        const buttonClass=doctor.isDisabled?"requestsButton disabledButtonClass":"requestsButton approvedButtonClass";
         return(
-          <button className="requestsButton">Approved</button>
+          <button className={buttonClass} onClick={setDoctorStatus(doctor,status)}>{status}</button>
         )
       }
     },
   ];
-  const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon',MiddleName:'lannister', age: 35 },
-    { id: 2, lastName: 'Lannister', firstName: 'Cersei',MiddleName:'lannister', age: 42 },
-    { id: 3, lastName: 'Lannister', firstName: 'Jaime',MiddleName:'lannister', age: 45 },
-    { id: 4, lastName: 'Stark', firstName: 'Arya',MiddleName:'lannister',age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys',MiddleName:'john',age: null },
-    { id: 6, lastName: 'Melisandre', firstName: null,MiddleName:'lannister', age: 150 },
-    { id: 7, lastName: 'Clifford', firstName: 'Ferrara',MiddleName:'lannister', age: 44 },
-    { id: 8, lastName: 'Frances', firstName: 'Rossini',MiddleName:'lannister', age: 36 },
-    { id: 9, lastName: 'Roxie', firstName: 'Harvey',MiddleName:'lannister', age: 65 },
-  ];
+  const setDoctorStatus=()=>{
+
+  }
   return (
     <div className='MainDoctorContainer'>
       <Navbar />
       <div className="doctorDataTable">
       <div>
       <DataGrid
-        rows={rows}
+        rows={doctors}
         columns={columns}
         initialState={{
           pagination: {
