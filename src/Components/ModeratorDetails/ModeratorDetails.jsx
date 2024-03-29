@@ -18,35 +18,35 @@ export default function ModeratorDetails() {
       valueGetter: (value, row) => `${row.firstName || ''} ${row.middleName || ''} ${row.lastName}`,
     },
   ];
-  
+
   const rows = [
-    { id: 1, lastName: 'Snow', middleName:'Kumar',firstName: 'Jon'},
-    { id: 2, lastName: 'Lannister',middleName:'Kumar', firstName: 'Cersei'},
-    { id: 3, lastName: 'Lannister',middleName:'Kumar',firstName: 'Jaime'},
-    { id: 4, lastName: 'Stark',middleName:'Kumar',firstName: 'Arya'},
-    { id: 5, lastName: 'Targaryen',middleName:'Kumar',firstName: 'Daenerys'},
-    { id: 6, lastName: 'Melisandre',middleName:'Kumar', firstName: null},
-    { id: 7, lastName: 'Clifford',middleName:'Kumar', firstName: 'Ferrara'},
-    { id: 8, lastName: 'Frances',middleName:'Kumar', firstName: 'Rossini'},
-    { id: 9, lastName: 'Roxie',middleName:'Kumar', firstName: 'Harvey'},
+    { id: 1, lastName: 'Snow', middleName: 'Kumar', firstName: 'Jon' },
+    { id: 2, lastName: 'Lannister', middleName: 'Kumar', firstName: 'Cersei' },
+    { id: 3, lastName: 'Lannister', middleName: 'Kumar', firstName: 'Jaime' },
+    { id: 4, lastName: 'Stark', middleName: 'Kumar', firstName: 'Arya' },
+    { id: 5, lastName: 'Targaryen', middleName: 'Kumar', firstName: 'Daenerys' },
+    { id: 6, lastName: 'Melisandre', middleName: 'Kumar', firstName: null },
+    { id: 7, lastName: 'Clifford', middleName: 'Kumar', firstName: 'Ferrara' },
+    { id: 8, lastName: 'Frances', middleName: 'Kumar', firstName: 'Rossini' },
+    { id: 9, lastName: 'Roxie', middleName: 'Kumar', firstName: 'Harvey' },
   ];
   return (
     <div className='MainModeratorContainer'>
-        <Navbar/>
-        <div className="ModeratorTable">
+      <Navbar />
+      <div className="ModeratorTable">
         <div>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 10 },
-          },
-        }}
-        pageSizeOptions={[5, 10]}
-      />
-    </div>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            initialState={{
+              pagination: {
+                paginationModel: { page: 0, pageSize: 10 },
+              },
+            }}
+            pageSizeOptions={[5, 10]}
+          />
         </div>
+      </div>
     </div>
   )
 }

@@ -5,8 +5,8 @@ import '../Home/Home.css'
 export default function Home() {
   return (
     <div className='mainHomeContainer'>
-        <Sidebar/>
-        <HomeRightBar/>
+      <Sidebar />
+      <HomeRightBar />
     </div>
   )
 }

@@ -5,8 +5,8 @@ import RequestDetails from '../../Components/RequestsDetails/RequestDetails'
 export default function Requests() {
   return (
     <div className='RequestContainers'>
-      <Sidebar/>
-      <RequestDetails/>
+      <Sidebar />
+      <RequestDetails />
     </div>
   )
 }

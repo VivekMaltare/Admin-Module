@@ -5,8 +5,8 @@ import ProfileDetails from '../../Components/ProfileDetails/ProfileDetails'
 export default function Profile() {
   return (
     <div className='ProfileContainer'>
-      <Sidebar/>
-      <ProfileDetails/>
+      <Sidebar />
+      <ProfileDetails />
     </div>
   )
 }

@@ -24,7 +24,7 @@ export default function ResponderDetails() {
     },
     { field: 'UserId', headerName: 'User Id', width: 130 },
   ];
-  
+
   const rows = [
     { id: 1, lastName: 'vivek', firstName: 'Jon', age: 35 },
     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
@@ -38,21 +38,21 @@ export default function ResponderDetails() {
   ];
   return (
     <div className='mainResponderContainer'>
-        <Navbar/>
-        <div className="ResponderTable">
+      <Navbar />
+      <div className="ResponderTable">
         <div>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 10 },
-          },
-        }}
-        pageSizeOptions={[5, 10]}
-      />
-    </div>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            initialState={{
+              pagination: {
+                paginationModel: { page: 0, pageSize: 10 },
+              },
+            }}
+            pageSizeOptions={[5, 10]}
+          />
         </div>
+      </div>
     </div>
   )
 }

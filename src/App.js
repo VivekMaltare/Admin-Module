@@ -10,13 +10,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" exact element={<Home/>}/>
-        <Route path="/doctors" exact element={<DoctorDetails/>}/>
-        <Route path="/responders" exact element={<Responder/>}/>
-        <Route path="/moderators" exact element={<Moderator/>}/>
-        <Route path="/requests" exact element={<Requests/>}/>
-        <Route path="/logout" exact element={<DoctorDetails/>}/>
-        <Route path="/profile" exact element={<Profile/>}/>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/doctors" exact element={<DoctorDetails />} />
+        <Route path="/responders" exact element={<Responder />} />
+        <Route path="/moderators" exact element={<Moderator />} />
+        <Route path="/requests" exact element={<Requests />} />
+        <Route path="/logout" exact element={<DoctorDetails />} />
+        <Route path="/profile" exact element={<Profile />} />
       </Routes>
     </Router>
   );

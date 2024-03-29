@@ -5,8 +5,8 @@ import ModeratorDetails from '../../Components/ModeratorDetails/ModeratorDetails
 export default function Moderator() {
   return (
     <div className='ModeratorContainer'>
-      <Sidebar/>
-      <ModeratorDetails/>
+      <Sidebar />
+      <ModeratorDetails />
     </div>
   )
 }

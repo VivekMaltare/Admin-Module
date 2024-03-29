@@ -5,8 +5,8 @@ import Doctor from '../../Components/DoctorDetailsComponent/Doctor'
 export default function DoctorDetails() {
   return (
     <div className='DoctorContainer'>
-      <Sidebar/>
-      <Doctor/>
+      <Sidebar />
+      <Doctor />
     </div>
   )
 }

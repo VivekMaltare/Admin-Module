@@ -1,42 +1,42 @@
-import React,{useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../DoctorDetailsComponent/Doctor.css'
 import Navbar from '../Navbar/Navbar'
 import { DataGrid } from '@mui/x-data-grid';
 export default function Doctor() {
-  const [doctors,setDoctors]=useState([]);
+  const [doctors, setDoctors] = useState([]);
   useEffect(() => {
     fetchData();
-  }, []); 
+  }, []);
   const fetchData = async () => {
     try {
       const token = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjpbIkFETUlOIl0sImlhdCI6MTcxMTYxNjIyNywiZXhwIjoxNzExNjUyMjI3fQ.XtoybJEG3QHIT83Habw4uvPizy7MMcfszqe54bk8jkE';
-      const response = await axios.get('http://192.168.39.236:8082/api/admin/doctors',{
+      const response = await axios.get('http://192.168.39.236:8082/api/admin/doctors', {
         headers: {
           Authorization: `Bearer ${token}`,
-          "Content-Type":'application/json',
-      }
+          "Content-Type": 'application/json',
+        }
       });
       console.log(response.data);
-      const extractedDoctors = response.data.map((doctor,index) => ({
-        id: index+1,
+      const extractedDoctors = response.data.map((doctor, index) => ({
+        id: index + 1,
         fullName: `${doctor.firstName || ''} ${doctor.middleName || ''} ${doctor.lastName || ''}`,
         gender: doctor.gender,
         licence_no: doctor.licenceNo,
         experience: doctor.experience,
         consultationFee: doctor.consultationFee,
-        isSenior: doctor.isSenior?"yes":"no",
+        isSenior: doctor.isSenior ? "yes" : "no",
         Email: doctor.email,
         age: doctor.age,
-        isDisabled:doctor.isDisabled
+        isDisabled: doctor.isDisabled
       }));
       setDoctors(extractedDoctors);
-      console.log(extractedDoctors);
+      //console.log(extractedDoctors);
     } catch (error) {
       console.error('Error fetching data:', error.message);
     }
   };
-  
+
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     {
@@ -46,7 +46,7 @@ export default function Doctor() {
       sortable: false,
       width: 160
     },
-    { field: 'gender', headerName: 'Gender', width: 130,sortable:false, },
+    { field: 'gender', headerName: 'Gender', width: 130, sortable: false, },
     { field: 'licence_no', headerName: 'License No', width: 130 },
     { field: 'experience', headerName: 'experience', width: 130 },
     { field: 'consultationFee', headerName: 'Consultation Fee', width: 130 },
@@ -62,35 +62,35 @@ export default function Doctor() {
       field: 'Requests',
       headerName: 'Requests',
       width: 130,
-      renderCell:(params)=>{
+      renderCell: (params) => {
         const doctor = params.row;
-        const status=doctor.isDisabled?"Pending":"Approved";
-        const buttonClass=doctor.isDisabled?"requestsButton disabledButtonClass":"requestsButton approvedButtonClass";
-        return(
-          <button className={buttonClass} onClick={setDoctorStatus(doctor,status)}>{status}</button>
+        const status = doctor.isDisabled ? "Pending" : "Approved";
+        const buttonClass = doctor.isDisabled ? "requestsButton disabledButtonClass" : "requestsButton approvedButtonClass";
+        return (
+          <button className={buttonClass} onClick={setDoctorStatus(doctor, status)}>{status}</button>
         )
       }
     },
   ];
-  const setDoctorStatus=()=>{
+  const setDoctorStatus = () => {
 
   }
   return (
     <div className='MainDoctorContainer'>
       <Navbar />
       <div className="doctorDataTable">
-      <div>
-      <DataGrid
-        rows={doctors}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 10 },
-          },
-        }}
-        pageSizeOptions={[5, 10]}
-      />
-    </div>
+        <div>
+          <DataGrid
+            rows={doctors}
+            columns={columns}
+            initialState={{
+              pagination: {
+                paginationModel: { page: 0, pageSize: 10 },
+              },
+            }}
+            pageSizeOptions={[5, 10]}
+          />
+        </div>
       </div>
     </div>
   )

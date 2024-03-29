@@ -1,12 +1,13 @@
-.mainResponderContainer{
+.mainResponderContainer {
     flex: 4;
     background-color: rgb(237, 234, 234);
 }
-.ResponderTable{
-    width:80%;
+
+.ResponderTable {
+    width: 80%;
     background-color: white;
-    margin:auto;
+    margin: auto;
     margin-top: 20px;
-    border-radius:10px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

@@ -1,47 +1,56 @@
-.mainSidebarContainer{
+.mainSidebarContainer {
     flex: 0.8;
     background-color: white;
-    height:100vh;
+    height: 100vh;
 }
-.liContainer{
+
+.liContainer {
     display: flex;
     align-items: center;
     margin-top: -7px;
 }
-.ulContainer{
+
+.ulContainer {
     margin-top: 30px;
 }
-.menu{
+
+.menu {
     display: flex;
-    color:rgb(66,71,75);
+    color: rgb(66, 71, 75);
     margin-left: -10px;
 }
-.sidebarIcons{
+
+.sidebarIcons {
     width: 20px;
     height: 20px;
 }
-.itemNames{
+
+.itemNames {
     margin-left: 10px;
-    color: rgb(70,76,81);
+    color: rgb(70, 76, 81);
 }
-.RequestContainer{
+
+.RequestContainer {
     display: flex;
     margin-left: 30px;
     padding: 10px;
-    background-color: rgb(61,65,63,0.115);
+    background-color: rgb(61, 65, 63, 0.115);
     border-radius: 10px;
     margin-top: 10px;
     margin-right: 10px;
 }
-.RequestContainer a{
+
+.RequestContainer a {
     text-decoration: none;
     color: black;
 }
-.RequestTitle{
+
+.RequestTitle {
     font-size: 14px;
-    color: rgb(70,76,81);
+    color: rgb(70, 76, 81);
     margin-left: 30px;
 }
-.mainScheduledContainer{
+
+.mainScheduledContainer {
     margin-top: 80px;
 }

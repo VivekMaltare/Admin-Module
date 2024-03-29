@@ -1,27 +1,31 @@
-.MainDoctorContainer{
+.MainDoctorContainer {
     flex: 4;
     background-color: rgb(237, 234, 234);
 }
-.doctorDataTable{
-    width:80%;
+
+.doctorDataTable {
+    width: 80%;
     background-color: white;
-    margin:auto;
+    margin: auto;
     margin-top: 20px;
-    border-radius:10px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.requestsButton{
+
+.requestsButton {
     padding-left: 10px;
     padding-right: 10px;
     color: black;
     padding-top: 6px;
     padding-bottom: 6px;
     border: none;
-    border-radius:10px;
+    border-radius: 10px;
 }
-.disabledButtonClass{
+
+.disabledButtonClass {
     background-color: gray;
 }
-.approvedButtonClass{
+
+.approvedButtonClass {
     background-color: green;
 }

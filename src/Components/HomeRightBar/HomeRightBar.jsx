@@ -1,33 +1,33 @@
 import React from 'react'
 import '../HomeRightBar/HomeRightBar.css'
 import Navbar from '../Navbar/Navbar'
-import { Tooltip, BarChart, CartesianGrid, Bar, PieChart, Pie, FunnelChart, Funnel, LabelList, Legend,XAxis,YAxis,LineChart,Line} from 'recharts'
+import { Tooltip, BarChart, CartesianGrid, Bar, PieChart, Pie, FunnelChart, Funnel, LabelList, Legend, XAxis, YAxis, LineChart, Line } from 'recharts'
 export default function HomeRightBar() {
   const data02 = [
     {
       "name": "Group A",
       "value": 3000,
-      "fill":"#FF407D"
+      "fill": "#FF407D"
     },
     {
       "name": "Group B",
       "value": 4567,
-      "fill":"#40679E"
+      "fill": "#40679E"
     },
     {
       "name": "Group C",
       "value": 1398,
-      "fill":"#FFCAD4"
+      "fill": "#FFCAD4"
     },
     {
       "name": "Group D",
       "value": 9800,
-      "fill":"#1B3C73"
+      "fill": "#1B3C73"
     },
     {
       "name": "Group E",
       "value": 3908,
-      "fill":"#F5DD61"
+      "fill": "#F5DD61"
     },
   ];
   const data3 = [
@@ -119,7 +119,7 @@ export default function HomeRightBar() {
       "amt": 2181
     }
   ]
-  
+
   return (
     <div className='mainHomeRightbar'>
       <Navbar />
@@ -181,9 +181,9 @@ export default function HomeRightBar() {
           <div className='firstBottomChart'>
             <p className='bottomContainerText'>Your Team Performance this week</p>
             <PieChart width={500} height={250}>
-  <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
-  <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
-</PieChart>
+              <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
+              <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+            </PieChart>
           </div>
           <div className='secondBottomChart'>
             <p className='bottomContainerText'>Your Montly interactions</p>

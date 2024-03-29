@@ -5,8 +5,8 @@ import ResponderDetails from '../../Components/ResponderDetails/ResponderDetails
 export default function Responder() {
   return (
     <div className='responderContainer'>
-        <Sidebar/>
-        <ResponderDetails/>
+      <Sidebar />
+      <ResponderDetails />
     </div>
   )
 }
