@@ -10,8 +10,8 @@ export default function Doctor() {
   }, []);
   const fetchData = async () => {
     try {
-      const token = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjpbIkFETUlOIl0sImlhdCI6MTcxMTYxNjIyNywiZXhwIjoxNzExNjUyMjI3fQ.XtoybJEG3QHIT83Habw4uvPizy7MMcfszqe54bk8jkE';
-      const response = await axios.get('http://192.168.39.236:8082/api/admin/doctors', {
+      const token = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjpbIkFETUlOIl0sImlhdCI6MTcxMjMxMTg2OCwiZXhwIjoxNzEyMzQ3ODY4fQ.StucixtYedlP-yN-GgbspiD6puH2ZgWEN695adFqFAo';
+      const response = await axios.get('http://192.168.168.209:8082/api/admin/doctors', {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": 'application/json',

@@ -6,11 +6,13 @@ import Moderator from './Pages/Moderator/Moderator';
 import Responder from './Pages/Responder/Responder';
 import Requests from './Pages/Requests/Requests';
 import Profile from './Pages/Profile/Profile';
+// import Login from './Components/Login/Login'
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route path="/" exact element={<Home/>} />
+        {/* <Route path="/home" exact element={<Login />} /> */}
         <Route path="/doctors" exact element={<DoctorDetails />} />
         <Route path="/responders" exact element={<Responder />} />
         <Route path="/moderators" exact element={<Moderator />} />

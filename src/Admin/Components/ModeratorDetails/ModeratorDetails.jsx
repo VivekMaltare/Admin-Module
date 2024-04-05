@@ -20,15 +20,9 @@ export default function ModeratorDetails() {
   ];
 
   const rows = [
-    { id: 1, lastName: 'Snow', middleName: 'Kumar', firstName: 'Jon' },
-    { id: 2, lastName: 'Lannister', middleName: 'Kumar', firstName: 'Cersei' },
-    { id: 3, lastName: 'Lannister', middleName: 'Kumar', firstName: 'Jaime' },
-    { id: 4, lastName: 'Stark', middleName: 'Kumar', firstName: 'Arya' },
-    { id: 5, lastName: 'Targaryen', middleName: 'Kumar', firstName: 'Daenerys' },
-    { id: 6, lastName: 'Melisandre', middleName: 'Kumar', firstName: null },
-    { id: 7, lastName: 'Clifford', middleName: 'Kumar', firstName: 'Ferrara' },
-    { id: 8, lastName: 'Frances', middleName: 'Kumar', firstName: 'Rossini' },
-    { id: 9, lastName: 'Roxie', middleName: 'Kumar', firstName: 'Harvey' },
+    { id: 1, lastName: 'Sharma', middleName: 'Kumar', firstName: 'Anjali' },
+    { id: 2, lastName: 'Sharma', middleName: 'Kumar', firstName: 'Milind' },
+    { id: 3, lastName: 'Shivi', middleName: 'Singh', firstName: 'Moyade' },
   ];
   return (
     <div className='MainModeratorContainer'>

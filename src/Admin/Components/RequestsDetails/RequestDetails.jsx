@@ -42,15 +42,9 @@ export default function RequestDetails() {
     },
   ];
   const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon', MiddleName: 'lannister', age: 35 },
-    { id: 2, lastName: 'Lannister', firstName: 'Cersei', MiddleName: 'lannister', age: 42 },
-    { id: 3, lastName: 'Lannister', firstName: 'Jaime', MiddleName: 'lannister', age: 45 },
-    { id: 4, lastName: 'Stark', firstName: 'Arya', MiddleName: 'lannister', age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', MiddleName: 'john', age: null },
-    { id: 6, lastName: 'Melisandre', firstName: null, MiddleName: 'lannister', age: 150 },
-    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', MiddleName: 'lannister', age: 44 },
-    { id: 8, lastName: 'Frances', firstName: 'Rossini', MiddleName: 'lannister', age: 36 },
-    { id: 9, lastName: 'Roxie', firstName: 'Harvey', MiddleName: 'lannister', age: 65 },
+    { id: 1, lastName: 'Snow', firstName: 'Jon', MiddleName: 'lannister', age: 35,gender:'Male',license_no:'875678',experience:'12 years',mobileNo:'9648753739'},
+    { id: 2, lastName: 'Sharma', firstName: 'Jyoti', MiddleName: '', age: 40,gender:'Female',license_no:'875383',experience:'15 years',mobileNo:'9642337391'},
+    { id: 3, lastName: 'Patidar', firstName: 'Kumar', MiddleName: 'Saurabh', age: 29,gender:'Male',license_no:'871234',experience:'3 years',mobileNo:'9687534890'},
   ];
   return (
     <div className='MainRequestContainer'>
